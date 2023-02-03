@@ -1,10 +1,9 @@
-def findOriginalArray(changed):
-    n=int(len(changed)/2)
-    ls=changed[:n]
-    ls2=changed[n:]
-    ls3=[]
-    for i in range(len(ls)):
-        if(ls[i]==2*ls2[i]):
-            print(ls[i],end="")
-        
-print(findOriginalArray([1,3,4,2,6,8]))
+class Solution:
+    def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        nums.sort()
+        ls=[]
+        for i in range(len(nums)):
+            if(nums[i]==target):
+                ls.append(i)
+        return ls
+
